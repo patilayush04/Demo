@@ -24,7 +24,9 @@ public class Basics {
 		//when-Hit and submit the API- resource,http method
 		//Then-validate the response
 		// convert content of file to string-> content of file can convert into Byte->Byte data to String
-		
+		System.out.println("printing statememt 1");
+		System.out.println("printing statememt 2");
+		System.out.println("printing statememt 3");
 		RestAssured.baseURI="https://rahulshettyacademy.com";
 		String response=given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
 		.body(new String(Files.readAllBytes(Paths.get("C:\\Users\\Austraxpc30\\Documents\\addbookdetails.json")))).when().post("maps/api/place/add/json")
